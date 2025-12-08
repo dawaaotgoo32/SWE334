@@ -1,6 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./db");
+
 
 const PORT = 4000;
 
@@ -34,6 +36,7 @@ app.use("/api/categories", categoriesRoutes);
 app.use("/api/product", productRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api", appRoutes);
+
 
 app.use(errorHandler);
 
